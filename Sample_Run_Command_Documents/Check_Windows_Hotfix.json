@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.2",
-  "description": "Get Windows System Information.",
+  "description": "Check if a Hotfix has been installed on Windows.",
   "parameters": {
     "KBID": {
       "type": "String",

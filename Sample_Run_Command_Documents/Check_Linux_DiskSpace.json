@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.2",
+  "description": "Check for free space on Linux instances.",
+  "runtimeConfig": {
+    "aws:runShellScript": {
+      "properties": [{
+        "id": "1.CheckFreeSpace",
+        "runCommand": ["df -h"]
+      }]
+    }
+  }
+}

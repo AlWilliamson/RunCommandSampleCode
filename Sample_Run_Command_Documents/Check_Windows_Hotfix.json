@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.2",
+  "description": "Get Windows System Information.",
+  "parameters": {
+    "KBID": {
+      "type": "String",
+      "description": "KB Hotfix ID (KB#######)",
+      "default": "KB2920189",
+      "allowedPattern": "([kK][bB][0-9]{6,7})"
+    }
+  },
+  "runtimeConfig": {
+    "aws:runPowerShellScript": {
+      "properties": [{
+        "runCommand": "get-hotfix -Id {{ KBID }} | format-list",
+        "timeoutSeconds": "120"
+      }]
+    }
+  }
+}
